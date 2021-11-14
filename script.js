@@ -1,8 +1,14 @@
-// this file contains the code for rock paper scissors game 
-const gameItems = ['rock', 'paper', 'sccissors',];
-function computerPlay() {
-    const computerSelector = gameItems[Math.floor(Math.random() * gameItems.length)];
-    return computerSelector;
+const selectionButtons  = document.querySelectorAll('[data-selection]');
 
+
+selectionButtons.forEach(selectionButton => {
+    selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection
+        makeSelection(selectionName);
+    })
+    
+});
+
+function makeSelection(selection){
+    console.log(selection)
 }
-const 
